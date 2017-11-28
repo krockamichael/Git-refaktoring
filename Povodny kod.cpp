@@ -4,7 +4,7 @@
 
 FILE *fr;
 
-int vypis(char s[29][50]){
+void vypis(char s[29][50]){
 	int i;
 	char *p;
 
@@ -173,26 +173,28 @@ int b(char *x[5],char s[29][50]){
 			if(x[i][j]=='9')
 			c9++;
 		}
-	if(i==4 && c0!=0)
+	if(i==4){
+	if(c0!=0)
 	printf("0: %d\n",c0);
-	if(i==4 && c1!=0)
+	if(c1!=0)
 	printf("1: %d\n",c1);
-	if(i==4 && c2!=0)
+	if(c2!=0)
 	printf("2: %d\n",c2);
-	if(i==4 && c3!=0)
+	if(c3!=0)
 	printf("3: %d\n",c3);
-	if(i==4 && c4!=0)
+	if(c4!=0)
 	printf("4: %d\n",c4);
-	if(i==4 && c5!=0)
+	if(c5!=0)
 	printf("5: %d\n",c5);
-	if(i==4 && c6!=0)
+	if(c6!=0)
 	printf("6: %d\n",c6);
-	if(i==4 && c7!=0)
+	if(c7!=0)
 	printf("7: %d\n",c7);
-	if(i==4 && c8!=0)
+	if(c8!=0)
 	printf("8: %d\n",c8);
-	if(i==4 && c9!=0)
+	if(c9!=0)
 	printf("9: %d\n",c9);
+	}
 	}
 }
 
@@ -205,7 +207,7 @@ int main(){
 	break;
 	if(c =='v')
 		vypis(s);
-	if(c =='o')
+	if(c =='o')									//zadat datum vo formate yyyymmdd (rok mesiac den)
 		odmeny(s);
 	if(c =='p')
 		palindrom(s);
