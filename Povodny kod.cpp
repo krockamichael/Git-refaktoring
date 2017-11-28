@@ -81,14 +81,7 @@ void palindrom(char s[29][50]){
 
 void n(char *x[5]){
 	int i,pocet;
-	char q;
-	
-	for(i=0;i<219;i++){							//spocitanie poctu zaznamov v textovom subore predaj.txt
-		q=getc(fr);
-		if(q=='\n')
-		pocet++;
-	}
-	
+
 	fseek(fr, 11, SEEK_SET);					//nastavenie na poziciu 1. SPZ v textovom subore predaj.txt
 	x[0]=(char*)malloc(9*sizeof(char));			
 	fgets(x[0],9,fr);							//zapisanie SPZ do pola
